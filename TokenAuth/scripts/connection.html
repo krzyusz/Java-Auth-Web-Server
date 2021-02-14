@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="UTF-8">
+    </head>
+    <body>
+
+                Type:
+                <input type="text" id="type"></br>
+                BrowserId
+                <input type="text" id="browserId"></br>
+                Hash
+                <input type="text" id="hash"></br>
+                UserId
+                <input type="text" id="userid"></br>
+                <button id="formbtn">Wyślij</button>
+
+        <script>
+
+                document.getElementById("formbtn").addEventListener("click", function(){
+                    type= document.getElementById("type").value;
+                    browserid= document.getElementById("browserId").value;
+                    hash = document.getElementById("hash").value;
+                    userid = document.getElementById("userid").value; 
+                    data = {
+                        'type': type,
+                        'browserId': browserid,
+                        'hash': hash,
+                        'userid': userid
+                    }
+                    console.log(data);
+                    fetch('http://localhost:7070', {
+                        method: 'POST',
+                        headers: {
+                            'Content-Type': 'application/json'
+                        },
+                        body: JSON.stringify("jdjdjd"),
+                    })
+                    .then(response => response.json())
+                    .then((data) => {
+                        console.log('Success:', data);
+                    })
+                    .catch((error) => {
+                        console.error('Error:', error);
+                    }); 
+
+                })
+/*
+                const data3 = a;
+
+                fetch('http://localhost:7070/', {
+                    method: 'POST',
+                    headers: {
+                        'Content-Type': 'application/json',
+                    },
+                    body: JSON.stringify(data3),
+                })
+                .then((response) => response.json())
+                .then((data) => {
+                console.log('Success:', data);
+                })
+                    .catch((error) => {
+                    console.error('Error:', error);
+                }); */
+
+        </script>
+    </body>
+</html>

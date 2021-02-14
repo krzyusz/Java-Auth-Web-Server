@@ -1,0 +1,53 @@
+{
+
+    "manifest_version": 2,
+    "name": "TokenAuth",
+    "version": "1.0",
+  
+    "description": "Adds a browser action icon to the toolbar.",
+    "homepage_url": "https://github.com/mdn/webextensions-examples/tree/master/beastify",
+    "icons": {
+      "48": "icons/beasts-48.png"
+    },
+
+    "background": {
+      "scripts": ["background.js"]
+    },
+
+    "permissions": [
+      "tabs",
+      "activeTab",
+      "<all_urls>",
+      "http://localhost/*",
+      "http://192.168.1.37:7070/*",
+      "http://localhost:3000/*"
+    ],
+
+    "browser_action": {
+      "default_icon": "icons/beasts-32.png",
+      "default_title": "TokenAuth",
+      "default_popup": "popup/auth.html"
+    },
+
+    "content_scripts": [ 
+      { 
+          "js": ["auth.js"], 
+          "matches": [ "http://*/*", "https://*/*"] 
+      },
+      {
+        "js": ["borderify.js"], 
+        "matches": ["*://*.mozilla.org/*"] 
+      },
+      {
+        "js": ["allSites.js"],
+        "matches":["http://*/*", "https://*/*"]
+      }
+  ],
+  
+    "web_accessible_resources": [
+      "http://localhost/*",
+      "http://192.168.1.37:7070/*",
+      "http://localhost:3000/*"
+    ]
+  
+  }

@@ -1,0 +1,48 @@
+{
+  "project_info": {
+    "project_number": "385998966196",
+    "firebase_url": "https://tokenauthapp.firebaseio.com",
+    "project_id": "tokenauthapp",
+    "storage_bucket": "tokenauthapp.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:385998966196:android:2098c2c33631be0e7576e1",
+        "android_client_info": {
+          "package_name": "com.example.tokenauthapp"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "385998966196-i70o0vuhmtvtr84vugp899n9l0eq5h8j.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "com.example.tokenauthapp",
+            "certificate_hash": "30f1d2d642b2625604cbf4c319080434840ad1b3"
+          }
+        },
+        {
+          "client_id": "385998966196-57v0mt26imhim1e0o93schplrqac33vc.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyB0VAY-hgn9fFoLrPUhUXCUoLwljreQ784"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "385998966196-57v0mt26imhim1e0o93schplrqac33vc.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
